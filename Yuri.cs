@@ -1,3 +1,5 @@
+namespace Yuri {
+
 interface Yuri():
     /*
     The main API methods that users of this class need to know are:
@@ -16,7 +18,7 @@ interface Yuri():
         bool done = False;
 
     public:
-        virtual float reward(Observation observation) {
+        public virtual float reward(Observation observation) {
             /*
             Args:
                 observation (object): agent's observation of the current environment
@@ -27,7 +29,7 @@ interface Yuri():
         }
 
 
-        public  GameIteration step(Action action) {
+        public virtual  GameIteration step(Action action) {
             /*Run one timestep of the game
             Accepts an action and returns a tuple (observation, reward, done).
             Args:
@@ -40,7 +42,7 @@ interface Yuri():
             throw new NotImplementedException();
         }
 
-        public void reset() {
+        public virtual void reset() {
             /*Resets the state of the environment and returns an initial observation.
             Returns: observation (object): the initial observation of the
                 space.
@@ -48,10 +50,11 @@ interface Yuri():
             throw new NotImplementedException();
         }
 
-        public void render(string mode='human') {
+        public virtual void render(string mode='human') {
            /*
             Args:
                 mode='human' to play against the bot
             */
             throw new NotImplementedException();
         }
+}
