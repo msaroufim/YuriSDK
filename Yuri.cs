@@ -1,6 +1,4 @@
-namespace Yuri {
-
-interface Yuri():
+interface Yuri() {
     /*
     The main API methods that users of this class need to know are:
         step

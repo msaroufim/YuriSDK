@@ -1,4 +1,4 @@
-class Yuri():
+class Yuri() {
     /*
     The main API methods that users of this class need to know are:
         step
@@ -56,3 +56,4 @@ class Yuri():
             return "Function not implemented"
 
         }
+    }
