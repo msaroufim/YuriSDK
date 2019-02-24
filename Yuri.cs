@@ -16,7 +16,7 @@ interface Yuri() {
         bool done = False;
 
     public:
-        public virtual float reward(Observation observation) {
+        virtual float reward(Observation observation) {
             /*
             Args:
                 observation (object): agent's observation of the current environment
@@ -27,7 +27,7 @@ interface Yuri() {
         }
 
 
-        public virtual  GameIteration step(Action action) {
+        virtual  GameIteration step(Action action) {
             /*Run one timestep of the game
             Accepts an action and returns a tuple (observation, reward, done).
             Args:
@@ -40,7 +40,7 @@ interface Yuri() {
             throw new NotImplementedException();
         }
 
-        public virtual void reset() {
+        virtual void reset() {
             /*Resets the state of the environment and returns an initial observation.
             Returns: observation (object): the initial observation of the
                 space.
@@ -48,7 +48,7 @@ interface Yuri() {
             throw new NotImplementedException();
         }
 
-        public virtual void render(string mode='human') {
+        virtual void render(string mode='human') {
            /*
             Args:
                 mode='human' to play against the bot
